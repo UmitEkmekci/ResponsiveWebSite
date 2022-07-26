@@ -1,0 +1,194 @@
+/*8.2*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*??*/    
+}
+
+html {
+    font-size: 7px;
+    
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color:grey;
+    color:black;
+    font-weight: bolder;
+}
+
+a{
+    text-decoration: none;
+    color: darkorange;
+    font-size: 2rem;
+    font-weight: bolder
+}
+
+p{
+    padding: 1.6rem 0;
+    font-size: 1.8rem;
+}
+
+header {
+    height: 46rem;
+}
+
+.img1 {
+    position: absolute; /*Anlamadım*/
+    background-image: url(1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 46rem;
+    width: 100%;
+    opacity: 0.5; /*Foto parlaklıgını azaltıyor.*/
+    z-index: -10; /*Fotoyu asagı gonderiyor. Sonucta position:absolute*/
+}
+
+
+.content { 
+    padding: 10rem; /*Nerde konumlanıyor anlamadım??*/
+    padding-bottom: 0; /*Nerde konumlanıyor anlamadım??*/
+}
+
+
+#bttn {/*Link olan ve id'si bttn olan tag'a yonlendirme yaptık.*/
+    display: inline-block;
+    background-color: #333;
+    color:#fff;
+    border:1px solid #666;
+    padding: 1.rem 3.2rem;
+    margin: 0.5rem 0;
+    transition: color 5s;
+    
+}
+
+#bttn:hover { /*bttn hover'ı.*/
+    background-color: crimson;
+    color:#fff
+    
+}
+
+
+#main-a { /*Nature Photography Baslıgı.*/
+    background-color: beige;
+    color:navy;
+    padding: 3rem 0rem;/*0'ı anlamadım??Yerine auto yazılmıyor.*/
+}
+
+#photos { /*4 ayrı fotograf*/
+    width: 100%;
+    padding: 0rem;
+}
+
+
+ul li{ /*Beyaz background'lu foto ve stringden olusan list item'ı.*/
+    background-color: #fff;
+    color:#333;
+    margin-bottom: 2rem;
+}
+
+#phototitle { /*string'lerin tamamı*/
+    padding-top: 1.5rem;
+}
+
+#main-c { /* 4'lu acıklama */
+    background-color: gainsboro;
+}
+
+#main-1 { /*Her aciklama icin border yarattık.*/
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 5rem;
+}
+
+#c-link { /*Acıklamaların her bir linki*/
+    color:black
+}
+
+#c-link:hover { /*Bu linklerin hover modu.*/
+    color:whitesmoke;
+    text-decoration: none;
+}
+
+#mainfoot { /*All rights reserved kısmı.*/
+    border-width: 0.5px; 
+    border-color: black;
+    border-style:solid;
+    background-color: beige;
+}
+
+#socialmedia { /*fixed social media*/
+    background-color:ivory;
+    position: fixed;
+    bottom:5px;
+    right: 5px;
+
+}
+
+/*Not: Yukarı kısım 800px ekran altındaki media query icin design edildi.*/
+
+@media screen and (min-width:800px) { /*800px'e kadar olan ekranlarda media query yaptık.*/
+    html {
+        font-size: 9px;
+    }
+
+    #icon1 {
+        width:20px; 
+        height:auto
+    }
+
+    #icon2 {
+        width:20px; 
+        height:auto
+    }
+
+    #icon3 {
+        width:20px; 
+        height:auto
+    }
+
+    ul li{
+        width:35%;
+        display: inline-block;
+        margin:1%
+    }
+}
+
+
+@media screen and (min-width:1050px) { /*1050px'e kadar olan ekranlarda media query yaptık.*/
+    html {
+        font-size: 11px;
+    }
+
+    ul li{
+        width:20%;
+        display: inline-block;
+        margin:1%
+    }
+
+    #main-1 {
+        width:35%;
+        display: inline-block;
+        margin:1%
+    }
+
+    #icon1 {
+        width:40px; 
+        height:auto
+    }
+
+    #icon2 {
+        width:40px; 
+        height:auto
+    }
+
+    #icon3 {
+        width:40px; 
+        height:auto
+    }
+}
+
